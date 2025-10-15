@@ -1,0 +1,61 @@
+:root{
+  --bg:#f7f7f8;
+  --card:#ffffff;
+  --muted:#9aa0a6;
+  --primary:#6f2be8;
+  --accent:#f2c12b;
+}
+*{box-sizing:border-box;font-family:Inter, 'Segoe UI', Roboto, Arial, sans-serif}
+body,html,#root{height:100%;margin:0;background:var(--bg)}
+.app-root{display:flex;align-items:center;justify-content:center;padding:6vw 20px}
+.device{width:min(92vw,420px);box-shadow:0 0 0 1px rgba(0,0,0,0.06), 0 6px 18px rgba(0,0,0,0.05);background:var(--card);border-radius:8px;min-height:60vh}
+.card{height:100%;display:flex;flex-direction:column}
+.card-body{padding:4vw}
+.card-body.top{padding-top:5vw}
+.card-body.bottom{margin-top:auto;padding-bottom:5vw}
+.hero-dots{height:220px;position:relative}
+.dot{width:34px;height:34px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;position:absolute}
+.pos6{left:40px;top:12px}
+.pos1{left:80px;top:80px}
+.pos2{left:100px;top:108px}
+.pos3{left:120px;top:136px}
+.pos4{left:140px;top:164px}
+.pos5{left:170px;top:186px}
+.h1,h2{margin:0 0 12px 0;font-weight:700}
+.h1{font-size:calc(18px + 0.4vw)}
+.h2{font-size:calc(16px + 0.3vw)}
+h1,h2{margin:0 0 12px 0;font-weight:700}
+h1{font-size:calc(18px + 0.6vw)}
+h2{font-size:calc(16px + 0.5vw)}
+.badge{background:var(--accent);color:#fff;border-radius:50%;padding:6px 9px;font-size:12px;margin-left:8px}
+.muted{color:var(--muted);font-size:13px;margin-bottom:12px}
+.form label{display:block;color:var(--primary);font-size:13px;margin-top:12px}
+.form input{width:100%;padding:12px;border-radius:8px;border:1px solid #e1e1e1;margin-top:6px;background:#fafafa}
+.radio-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.radios{display:flex;gap:12px}
+.radio{display:inline-flex;align-items:center;gap:8px}
+.btn{display:inline-block;text-decoration:none;text-align:center;padding:12px 18px;border-radius:10px;margin-top:16px;font-weight:600;cursor:pointer}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary.block{display:block;width:100%}
+.btn.secondary{background:#ecd8ff;color:#4b2e83}
+.btn.disabled{background:#cfcfcf;color:#fff}
+.profile{padding:20px}
+.header{font-weight:700;border-bottom:1px dashed #e0e0e0;padding-bottom:12px;margin-bottom:12px}
+.profile-row{display:flex;gap:12px;align-items:center;margin-top:12px}
+.avatar img{width:56px;height:56px;border-radius:50%}
+.avatar-preview{width:14vw;max-width:96px;height:14vw;max-height:96px;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#fff}
+.avatar-preview img{width:100%;height:100%;object-fit:cover}
+.name{font-weight:700}
+.email{color:var(--muted);font-size:13px}
+
+/* small responsive tweak */
+@media (max-width:480px){
+  .app-root{padding:14px}
+  .device{width:100%;border-radius:6px}
+  .card-body{padding:16px}
+  .btn{padding:14px}
+}
+
+@media (min-width:900px){
+  .device{width:420px}
+}
